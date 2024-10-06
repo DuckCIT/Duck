@@ -1,5 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Ngăn chặn việc gửi form mặc định
+  
+    const formData = new FormData(this); // Lấy dữ liệu từ form
+  
+    fetch('https://formspree.io/f/xeoqjzze', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        this.reset();
+        document.getElementById('reminder').style.display = 'block';
+      } else {
+        throw new Error('Something went wrong');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+  
+
   // Typing Effects
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".cursor");

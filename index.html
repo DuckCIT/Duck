@@ -47,8 +47,8 @@
             </div>
           </div>
           <div class="profile-card anim3">
-            <h6>CONTACT</h6>
             <div class="contact">
+            <h6>CONTACT</h6>
               <a href="https://www.facebook.com/tducxd" target="_blank">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -59,6 +59,16 @@
                 <i class="fab fa-github"></i>
               </a>
             </div>
+            <form id="contact-form" class="contact-form">
+              <label for="name">I want to know your name:</label><br>
+              <input type="text" id="name" name="name" placeholder="If you want..."><br><br>
+              
+              <label for="message">Ask your questions:</label><br>
+              <textarea id="message" name="message" rows="3" placeholder="Any asking..." required></textarea><br><br>
+              
+              <button type="submit">Submit</button>
+            </form>
+            
           </div>
         </div>
       </div>
@@ -69,7 +79,7 @@
         <div id="projects-container"></div>
       </div>
     </div>
-    <!-- <div id="reminder">NOTE: THIS SITE IS DESIGNED FOR MOBILE.</div> -->
+    <div id="reminder">RECORD YOUR QUESTION</div>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
