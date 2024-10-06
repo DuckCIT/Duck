@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Ngăn chặn việc gửi form mặc định
+    event.preventDefault();
   
-    const formData = new FormData(this); // Lấy dữ liệu từ form
+    const formData = new FormData(this);
   
     fetch('https://formspree.io/f/xeoqjzze', {
       method: 'POST',
@@ -24,7 +24,31 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error('Error:', error);
     });
   });
-  
+
+  const questions = [
+    "Anh đẹp trai có ngiu chưaa?",
+    "Mình thích bạn lâu rùi óoo",
+    "Con nho nyc khong?",
+    "Thợ săn hồng hài nhi",
+    "Có khóa học lập trình nào cho người mới bắt đầu không?",
+    "Anh có thích em hong?",
+    "I miss you",
+    "Cách hack facebook cờ rút",
+    "Có thể làm quen không?",
+  ];
+
+  let lastQuestionIndex = -1;
+
+  document.getElementById('random-question-button').addEventListener('click', function() {
+      let randomIndex;
+      do {
+          randomIndex = Math.floor(Math.random() * questions.length);
+      } while (randomIndex === lastQuestionIndex);
+
+      lastQuestionIndex = randomIndex;
+      document.getElementById('message').value = questions[randomIndex];
+  });
+    
 
   // Typing Effects
   const typedTextSpan = document.querySelector(".typed-text");
