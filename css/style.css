@@ -424,6 +424,10 @@ button:hover {
   text-align: start;
 }
 
+span {
+  font-weight: normal;
+}
+
 .content p span.cursor {
   background-color: #ccc;
   margin-left: 0.1rem;
@@ -563,7 +567,6 @@ button:hover {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 @keyframes fade-in {
   0% {
