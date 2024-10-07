@@ -168,11 +168,24 @@ document.addEventListener("DOMContentLoaded", function () {
   
     projectsContainer.appendChild(projectElement);
   
-    // Tạo delay để animation chạy xen kẽ
-    setTimeout(() => {
-      projectElement.classList.add("project-visible");
-    }, index * 200); // Tăng dần delay cho từng project
+    // Tạo IntersectionObserver để chỉ thêm class khi projectElement vào khung nhìn
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Thêm class khi phần tử xuất hiện trong viewport
+          setTimeout(() => {
+            projectElement.classList.add("project-visible");
+          }, index * 200); // Tăng dần delay cho từng project
+          // Ngừng quan sát sau khi đã xuất hiện
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    // Bắt đầu quan sát phần tử dự án
+    observer.observe(projectElement);
   });
+  
   
   const progressBars = document.querySelectorAll('.progress');
 
@@ -181,17 +194,31 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (widthMatch) {
       const width = widthMatch[1] + '%';
-
+  
       // Đặt width về 0 để bắt đầu animation
       progress.style.width = '0';
-
-      // Tạo delay để các thanh tiến trình xuất hiện dần dần
-      setTimeout(() => {
-        progress.style.width = width; // Khôi phục lại width ban đầu sau khi delay
-        progress.classList.add('progress-visible');
-      }, 500); // Tăng dần delay cho mỗi thanh tiến trình
+  
+      // Tạo IntersectionObserver để chỉ thực hiện khi progressBar xuất hiện trong viewport
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Khôi phục lại width ban đầu sau khi vào khung nhìn
+            setTimeout(() => {
+              progress.style.width = width;
+              progress.classList.add('progress-visible');
+            }, index * 500); // Tăng dần delay cho mỗi thanh tiến trình
+  
+            // Ngừng quan sát sau khi thanh tiến trình đã xuất hiện
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+  
+      // Bắt đầu quan sát từng thanh tiến trình
+      observer.observe(progress);
     } else {
       console.error('No width found for:', progress);
     }
   });
+  
 });
