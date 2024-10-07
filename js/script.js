@@ -145,21 +145,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const projectsContainer = document.getElementById("projects-container");
 
-  projects.forEach((project) => {
+  projects.forEach((project, index) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("projects");
+  
+    // Tạo animation xen kẽ giữa trái và phải
+    const animationClass = index % 2 === 0 ? "project-left" : "project-right";
+    projectElement.classList.add(animationClass);
+  
     const displayUrl = project.demoUrl.replace(/^https?:\/\//, "");
-
+  
     projectElement.innerHTML = `
-        <div class="project-head">
-          <a href="${project.url}">${project.name}</a>
-          <span tooltip="${project.visibility === "Public" ? "Open source" : "Hidden"}">${project.visibility}</span>
-        </div>
-        <div class="project-body">
-          <i class="fa fa-link"></i>
-          <a target="_blank" href="${project.demoUrl}">${displayUrl}</a>
-        </div>
-      `;
+      <div class="project-head">
+        <a href="${project.url}">${project.name}</a>
+        <span tooltip="${project.visibility === "Public" ? "Open source" : "Hidden"}">${project.visibility}</span>
+      </div>
+      <div class="project-body">
+        <i class="fa fa-link"></i>
+        <a target="_blank" href="${project.demoUrl}">${displayUrl}</a>
+      </div>
+    `;
+  
     projectsContainer.appendChild(projectElement);
+  
+    // Tạo delay để animation chạy xen kẽ
+    setTimeout(() => {
+      projectElement.classList.add("project-visible");
+    }, index * 200); // Tăng dần delay cho từng project
+  });
+  
+  const progressBars = document.querySelectorAll('.progress');
+
+  progressBars.forEach((progress, index) => {
+    const widthMatch = progress.getAttribute('style').match(/width:\s*(\d+)%/);
+    
+    if (widthMatch) {
+      const width = widthMatch[1] + '%';
+
+      // Đặt width về 0 để bắt đầu animation
+      progress.style.width = '0';
+
+      // Tạo delay để các thanh tiến trình xuất hiện dần dần
+      setTimeout(() => {
+        progress.style.width = width; // Khôi phục lại width ban đầu sau khi delay
+        progress.classList.add('progress-visible');
+      }, 500); // Tăng dần delay cho mỗi thanh tiến trình
+    } else {
+      console.error('No width found for:', progress);
+    }
   });
 });

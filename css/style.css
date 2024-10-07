@@ -142,6 +142,7 @@ img {
 * {
   box-sizing: border-box;
 }
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -155,18 +156,50 @@ img {
   box-sizing: border-box;
   width: 50%;
 }
-.container2 {
-  font-size:x-large;
+.profile-card .skills {
+  margin: 0px 10px;
+}
+
+.progress-bar {
+  margin-top: 5px;
+  background-color: #323435;
+  border-radius: 25px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  background-color: #3672a4;
+  height: 15px;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  width: 0;
+  transition: width 0.6s ease-out;
+}
+
+.progress-visible {
+  transition: width 0.6s ease-out;
+}
+
+.container,
+.container2,
+.container3 {
+  font-size: x-large;
   font-weight: 600;
   overflow: auto;
   height: 100vh;
-  width: 50%;
+  flex: 1;
   scrollbar-width: none;
   color: #ffffff;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
-
+.container {
+  padding: 0px;
+}
 
 form {
   max-width: 500px;
@@ -180,7 +213,8 @@ label {
 textarea {
   resize: none;
 }
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -217,7 +251,6 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 
 .profile-header {
   background-color: #a3a7ab;
@@ -280,18 +313,22 @@ button:hover {
 }
 
 @media screen and (max-width: 640px) {
-  .profile-card, .container, .container2 {
+  .profile-card,
+  .container,
+  .container2 {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .container, .container2 {
+  .container,
+  .container2,
+  .container3 {
     height: 100%;
     box-shadow: none;
   }
-
+  .container3,
   .container2 {
-    margin-top: -15px;
+    padding: 0px 15px;
   }
 }
 
@@ -345,8 +382,8 @@ button:hover {
     color: #539bf4;
   }
   i {
-  font-size: 15px;
-  transform: translateY(-5px);
+    font-size: 15px;
+    transform: translateY(-5px);
   }
 }
 
@@ -508,6 +545,26 @@ button:hover {
   }
 }
 
+.projects {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-out;
+}
+
+.project-left {
+  transform: translateX(-20px);
+}
+
+.project-right {
+  transform: translateX(20px);
+}
+
+.project-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -572,8 +629,12 @@ button:hover {
   -webkit-tap-highlight-color: transparent;
   z-index: 1;
   transform: scale(var(--generate-button-scale, 1)) translateZ(0);
-  box-shadow: 0px 0px 120px var(--generate-button-shadow-wide, transparent), 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 1px var(--generate-button-shadow-inset, rgba(255, 255, 255, 0.04)),
-    0 0 0 var(--generate-button-shadow-outline, 0px) rgba(var(--clr-button), 0.4);
+  box-shadow: 0px 0px 120px var(--generate-button-shadow-wide, transparent),
+    0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px
+      var(--generate-button-shadow-inset, rgba(255, 255, 255, 0.04)),
+    0 0 0 var(--generate-button-shadow-outline, 0px)
+      rgba(var(--clr-button), 0.4);
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 .generate-button:before {
