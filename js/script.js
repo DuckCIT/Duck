@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Image2ASCII",
       url: "https://github.com/duckteamz/image2ascii",
-      demoUrl: "https://duckcit.me/image2ascii",
+      demoUrl: "https://duckteamz.github.io/image2ascii",
       visibility: "Public",
     },
     {
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Event Tet",
       url: "https://github.com/duckteamz/eventTet",
-      demoUrl: "https://duckcit.me/eventTet",
+      demoUrl: "https://duckteamz.github.io/eventTet",
       visibility: "Private",
     },
   ];
