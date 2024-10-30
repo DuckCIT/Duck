@@ -113,32 +113,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const projects = [
     {
       name: "Image2ASCII",
-      url: "https://github.com/duckteamz/image2ascii",
-      demoUrl: "https://duckteamz.github.io/image2ascii",
+      url: "https://github.com/duckcit/image2ascii",
+      demoUrl: "https://duckcit.github.io/image2ascii",
       visibility: "Public",
     },
     {
       name: "DuckTV",
-      url: "https://github.com/DuckTeamz/DuckTV",
-      demoUrl: "https://github.com/duckteamz/DuckTV/releases/tag/v1.0",
+      url: "https://github.com/duckcit/DuckTV",
+      demoUrl: "https://github.com/duckcit/DuckTV/releases/tag/v1.0",
       visibility: "Public",
     },
     {
       name: "Rank Score THPT2024",
-      url: "https://github.com/DuckTeamz/rank-thpt2024",
-      demoUrl: "https://github.com/DuckTeamz/rank-thpt2024/blob/main/main.py",
+      url: "https://github.com/duckcit/rank-thpt2024",
+      demoUrl: "https://github.com/duckcit/rank-thpt2024/blob/main/main.py",
       visibility: "Public",
     },
     {
       name: "Pydroid3 Premium",
-      url: "https://github.com/DuckTeamz/pydroid3",
-      demoUrl: "https://github.com/duckteamz/pydroid3/releases/tag/v1.0",
+      url: "https://github.com/duckcit/pydroid3",
+      demoUrl: "https://github.com/duckcit/pydroid3/releases/tag/v1.0",
       visibility: "Public",
     },
     {
       name: "Event Tet",
-      url: "https://github.com/duckteamz/eventTet",
-      demoUrl: "https://duckteamz.github.io/eventTet",
+      url: "https://github.com/duckcit/eventTet",
+      demoUrl: "https://duckcit.github.io/eventTet",
       visibility: "Private",
     },
   ];
