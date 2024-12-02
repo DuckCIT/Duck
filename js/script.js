@@ -112,6 +112,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Project
   const projects = [
     {
+      name: "AllReacts for Facebook Stories",
+      url: "https://github.com/duckcit/AllReacts-for-Facebook-Stories",
+      demoUrl: "https://github.com/duckcit/AllReacts-for-Facebook-Stories",
+      visibility: "Public",
+    },
+    {
       name: "Image2ASCII",
       url: "https://github.com/duckcit/image2ascii",
       demoUrl: "https://duckcit.github.io/image2ascii",
