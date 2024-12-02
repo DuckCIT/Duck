@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
     "I miss you",
     "Cách hack facebook cờ rút",
     "Có thể làm quen không?",
+    "Anh ơi, ngủ chưa mà đẹp trai dữ vậy?",
+    "Nhìn anh mãi không chán luôn á, làm sao giờ?",
+    "Có nyc nào mà không thích quay lại không?",
+    "Bí kíp cua crush trong 7 ngày là gì ạ?",
+    "Em nghĩ em lạc đường rồi, nhưng đường vào tim anh á!",
+    "Thích lập trình hay thích lập gia đình với em hơn?",
+    "Nếu em là gió, anh có nguyện làm mây không?",
+    "Học lập trình xong có trở thành siêu nhân không ạ?",
+    "Chơi game nhiều mà sao không 'chơi' em luôn?",
+    "Một ngày đẹp trời như hôm nay, anh nghĩ gì về em?",
   ];
 
   let lastQuestionIndex = -1;
