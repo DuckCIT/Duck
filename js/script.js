@@ -26,26 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const questions = [
-    "Anh đẹp trai có ngiu chưaa?",
-    "Mình thích bạn lâu rùi óoo",
-    "Con nho nyc khong?",
-    "Thợ săn hồng hài nhi",
-    "Có khóa học lập trình nào cho người mới bắt đầu không?",
-    "Anh có thích em hong?",
-    "I miss you",
-    "Cách hack facebook cờ rút",
-    "Có thể làm quen không?",
-    "Anh ơi, ngủ chưa mà đẹp trai dữ vậy?",
-    "Nhìn anh mãi không chán luôn á, làm sao giờ?",
-    "Có nyc nào mà không thích quay lại không?",
-    "Bí kíp cua crush trong 7 ngày là gì ạ?",
-    "Em nghĩ em lạc đường rồi, nhưng đường vào tim anh á!",
-    "Thích lập trình hay thích lập gia đình với em hơn?",
-    "Nếu em là gió, anh có nguyện làm mây không?",
-    "Học lập trình xong có trở thành siêu nhân không ạ?",
-    "Chơi game nhiều mà sao không 'chơi' em luôn?",
-    "Một ngày đẹp trời như hôm nay, anh nghĩ gì về em?",
-  ];
+    "Thật ra bạn có hay lén xem story của crush không, khai đi?",
+    "Món ăn nào bạn mê nhất mà bạn bè bảo là kỳ cục?",
+    "Nếu được đổi tên một ngày, bạn chọn tên gì cho cool?",
+    "Lần gần nhất bạn cười đau cả bụng là vì cái gì?",
+    "Bạn có hay giả vờ bận để tránh ai đó không, kể xem?",
+    "Tính xấu nào của bạn mà bạn biết nhưng lười sửa?",
+    "Nếu crush nhắn tin lúc 2 giờ sáng, bạn rep luôn không?",
+    "Bạn thích ngủ nướng hay dậy sớm mà giả vờ năng động?",
+    "Có lần nào bạn hát nhầm lời bài tủ mà bị ai đó bắt gặp chưa?",
+    "Nếu được xài tiền của tỷ phú một ngày, bạn tiêu gì trước?",
+    "Bạn nghĩ mình đẹp nhất khi nào, lúc mới ngủ dậy hay lúc makeup xong?",
+    "Lần cuối bạn bị quê độ là khi nào, kể nghe đi?",
+    "Bạn có hay nói chuyện một mình không, kiểu tự độc thoại ấy?",
+    "Nếu phải chọn giữa ăn gà rán và pizza cả đời, bạn chọn cái nào?",
+    "Bạn có tin mấy đứa hay flex trên mạng thật ra buồn lắm không?",
+    "Lần gần nhất bạn giả vờ nghe điện thoại để tránh ai đó là khi nào?",
+    "Bạn thích mưa hay nắng hơn, hay là ghét cả hai luôn?",
+    "Nếu được quay lại tuổi 15, bạn muốn làm gì khác đi?",
+    "Bạn có hay tưởng tượng mình là main trong phim không, phim gì?",
+    "Thật lòng đi, bạn có sợ ma không hay chỉ giả vờ mạnh mẽ thôi?"
+];
 
   let lastQuestionIndex = -1;
 
@@ -63,7 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Typing Effects
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".cursor");
-  var textArray = ["Hey there! I'm a coder from Vietnam", "My old nickname was DevGecko", "And that's all about me :)"];
+  var textArray = [
+  "Hey there! I'm a coder from Vietnam", 
+  "My old nickname was DevGecko",
+  "And that's all about me :)"
+];
 
   let typingDelay = 50;
   const erasingDelay = 25;
@@ -128,6 +133,12 @@ document.addEventListener("DOMContentLoaded", function () {
       visibility: "Public",
     },
     {
+      name: "Facebook Messenger JSON Viewer",
+      url: "https://github.com/duckcit/Facebook-Messenger-JSON-Viewer",
+      demoUrl: "https://duckcit.github.io/Facebook-Messenger-JSON-Viewer",
+      visibility: "Public",
+    },
+    {
       name: "Image2ASCII",
       url: "https://github.com/duckcit/image2ascii",
       demoUrl: "https://duckcit.github.io/image2ascii",
@@ -140,22 +151,10 @@ document.addEventListener("DOMContentLoaded", function () {
       visibility: "Public",
     },
     {
-      name: "Rank Score THPT2024",
-      url: "https://github.com/duckcit/rank-thpt2024",
-      demoUrl: "https://github.com/duckcit/rank-thpt2024/blob/main/main.py",
-      visibility: "Public",
-    },
-    {
       name: "Pydroid3 Premium",
       url: "https://github.com/duckcit/pydroid3",
       demoUrl: "https://github.com/duckcit/pydroid3/releases/tag/v1.0",
       visibility: "Public",
-    },
-    {
-      name: "Event Tet",
-      url: "https://github.com/duckcit/eventTet",
-      demoUrl: "https://duckcit.github.io/eventTet",
-      visibility: "Private",
     },
   ];
 
