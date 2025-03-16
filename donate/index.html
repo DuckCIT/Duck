@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <icon rel="icon" href="img/icon.bin">
+    <title>Buy me a coffee</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 15px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+        .donate-box {
+            max-width: 420px;
+            padding: 30px;
+            background: #161b22;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .gif-container {
+            margin-bottom: 15px;
+        }
+        .gif-container img {
+            width: 120px;
+            height: auto;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #58a6ff;
+        }
+        p {
+            font-size: 16px;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 15px auto;
+            padding: 12px 24px;
+            background: #238636;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #2ea043;
+            transform: scale(1.05);
+        }
+        .qr {
+            margin-top: 15px;
+        }
+        .qr img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .thank-you {
+            display: none;
+            font-size: 18px;
+            color: #58a6ff;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="donate-box">
+            <div class="gif-container">
+                <img src="https://media1.tenor.com/m/igAZn4ZBFJYAAAAC/love-u-cat-cat-cute.gif" alt="Cute donate gif">
+            </div>
+            <h1>Ủng hộ tớ một ly cà phê nha!</h1>
+            <p>Hãy giúp tớ tiếp tục sáng tạo nội dung và phát triển dự án bằng cách donate nhé! ❤️</p>
+            
+            <h3>Ủng hộ qua Momo</h3>
+            <div class="qr">
+                <img src="momo_qr.jpg" alt="Quét mã Momo">
+            </div>
+            <a href="https://page.momoapp.vn/ZVrGdW2TbK" target="_blank" class="btn" onclick="showThankYou()">Donate qua Momo</a>
+            <p id="thank-you" class="thank-you">Cảm ơn bạn đã ủng hộ! ❤️</p>
+            <div class="footer">Made with ❤️ by DuckCIT</div>
+        </div>
+    </div>
+    <script>
+        function showThankYou() {
+            document.getElementById('thank-you').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

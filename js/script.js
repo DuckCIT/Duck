@@ -139,6 +139,12 @@ document.addEventListener("DOMContentLoaded", function () {
       visibility: "Public",
     },
     {
+      name: "TikTok Comment Translator",
+      url: "https://github.com/DuckCIT/TikTok-Comment-Translator",
+      demoUrl: "https://github.com/DuckCIT/TikTok-Comment-Translator",
+      visibility: "Public",
+    },
+    {
       name: "Image2ASCII",
       url: "https://github.com/duckcit/image2ascii",
       demoUrl: "https://duckcit.github.io/image2ascii",

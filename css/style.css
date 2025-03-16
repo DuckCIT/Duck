@@ -209,11 +209,26 @@ button:hover {
     box-shadow: none;
   }
   .container2 {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
   .container3 {
-    padding-top: -5px 15px;
+    padding: 0 15px;
   }
+}
+.btnDonate {
+  background-color: #242627;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  margin: 5px 15px 15px 15px;
+}
+.btnDonate:hover {
+  background-color: #00824a;
+  transform: scale(1.05);
 }
 
 .profile-card h6 {
